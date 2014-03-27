@@ -133,27 +133,7 @@ void Pathfinding::nextPath()
                         //If there is none of the above that will work, we are stuck! Lets try to backtrack
                         if (noRoomChecker == 8)
                         {
-                            //mWalkList.clear();
-                            //mOpenList.clear();
                             cout << " Size" << mClosedList.size() << "\n";
-                            /*
-                            for (int p=0; p<mClosedList.size(); p++)
-                            {
-                                mOpenList[p] = mClosedList[p];
-                            }
-                            currentNode = savedBacktrackNode;
-                            mDirection = mDestination - mOpenList[currentNode];
-                            mCurrentDistance = mDirection.normalise();
-
-                            for (int l=0; l<8;l++){
-                                tempDistanceTest[l] = mCurrentDistance *2;
-                            }
-                            mDirection = mDestination - mOpenList[temp[currentNode]];
-                            tempDistanceTest[1] = mDirection.normalise();
-                           // i = 0;
-                            //j = 0;
-                            //mDirection = mDestination - mOpenList[currentNode];
-                            //tempDistanceTest[currentNode] = mDirection.normalise();*/
                             cout << "*************NO ROOM******************";
                             testPathBool = false;
                             found = true;
@@ -188,15 +168,6 @@ void Pathfinding::nextPath()
                                 savedBacktrackNode = currentNode;
                                 int tempForSize = mOpenList.size();
                                 cout << tempForSize << "TempSize" << "\n" ;
-                                /*
-                                for (int o=0; o<tempForSize; o++){
-                                    mClosedList[o] = mOpenList[o];
-                                }*/
-                                /*
-                                mClosedList.push_back(mOpenList[currentNode]);
-                                cout << mClosedList[0] << "ClosedList  \n";
-                                cout << mOpenList[currentNode] << "OpenList \n";
-                                cout << currentNode << "CurrentNode! \n";*/
                             }
                         }
                     }
